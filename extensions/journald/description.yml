@@ -1,0 +1,21 @@
+extension:
+  name: journald
+  description: Read systemd-journald form DuckDB
+  version: 1.0.0
+  language: C++
+  build: cmake
+  license: MIT
+  excluded_platforms: "osx_amd64;osx_arm64;windows_amd64;windows_amd64_rtools;wasm_mvp;wasm_eh;wasm_threads;linux_amd64_gcc4;linux_arm64"
+
+  maintainers:
+    - hannes
+
+repo:
+  github: adevday/duckdb-journald
+  ref: 98155bf3dcd541cf98dca52ac6006a27d5176965
+
+docs:
+  hello_world: |
+    SELECT * FROM journal('');
+  extended_description: |
+    see the [README](https://github.com/adevday/duckdb-journald).
